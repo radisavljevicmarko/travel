@@ -1,76 +1,92 @@
-import React from 'react'
-import { useState } from 'react';
-import './navbar.css'
-import { MdOutlineTravelExplore } from "react-icons/md"; 
-import { AiFillCloseCircle } from "react-icons/ai"; 
+import React from "react";
+import { useState } from "react";
+import "./navbar.css";
+import { MdOutlineTravelExplore } from "react-icons/md";
+import { AiFillCloseCircle } from "react-icons/ai";
 import { PiDotsNineBold } from "react-icons/pi";
 
 const Navbar = () => {
-  const [active, setActive] = useState('navBar')
+  const [active, setActive] = useState("navBar");
   const showNavbar = () => {
-    setActive('navBar activeNavbar')
-  }
+    setActive("navBar activeNavbar");
+  };
   const removeNavbar = () => {
-    setActive('navBar')
-  }
+    setActive("navBar");
+  };
 
   return (
-    <section className='navBarSection'>
-      <header className="header flex">  
-
+    <section className="navBarSection">
+      <header className="header flex">
         <div className="logoDiv">
           <a href="#" className="logo flex">
-            <h1><MdOutlineTravelExplore className="icon"/>Travel.</h1>
+            <h1>
+              <MdOutlineTravelExplore className="icon" />
+              Travel.
+            </h1>
           </a>
         </div>
 
         <div className={active}>
           <ul className="navList flex">
-
             <li className="navItem">
-              <a href="#" className="navLink">Home</a>
+              <a href="#" className="navLink">
+                Home
+              </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Package</a>
+              <a href="#" className="navLink">
+                Package
+              </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Shop</a>
+              <a href="#" className="navLink">
+                Shop
+              </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">About</a>
+              <a href="#" className="navLink">
+                About
+              </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Pages</a>
+              <a href="#" className="navLink">
+                Pages
+              </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">News</a>
+              <a href="#" className="navLink">
+                News
+              </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Contact</a>
+              <a href="#" className="navLink">
+                Contact
+              </a>
             </li>
 
-            <button className='btn'>
-              <a href="#" className="navLink">BOOK NOW</a>  
+            <button className="btn">
+              <a href="#" className="navLink">
+                BOOK NOW
+              </a>
             </button>
           </ul>
 
           <div onClick={removeNavbar} className="closeNavbar">
-            <AiFillCloseCircle className="icon"/>
+            <AiFillCloseCircle className="icon" />
           </div>
         </div>
         <div onClick={showNavbar} className="toggleNavbar">
-          <PiDotsNineBold className="icon"/>
+          <PiDotsNineBold className="icon" />
         </div>
-
       </header>
     </section>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

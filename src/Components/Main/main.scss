@@ -1,9 +1,13 @@
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient(to right, var(--SecondaryColor), var(--PrimaryColor));
+  --gradientColor: linear-gradient(
+    to right,
+    var(--SecondaryColor),
+    var(--PrimaryColor)
+  );
   --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(201, 33%, 16%); 
+  --blackColor: hsl(201, 33%, 16%);
   --textColor: hsl(240, 4%, 36%);
   --whiteColorDeam: hsl(0, 0%, 93%);
   --greyText: rgb(190, 190, 190);
@@ -13,20 +17,18 @@
   --cardHover: rgb(225, 255, 255);
 }
 
-
-.main{
+.main {
   width: 100%;
-  
-  .secTitle{
-    .title{
+
+  .secTitle {
+    .title {
       position: relative;
       width: max-content;
-      color:var(--textColor);
-      margin:1rem 0;
+      color: var(--textColor);
+      margin: 1rem 0;
       z-index: 2;
 
-
-      &::after{
+      &::after {
         position: absolute;
         content: "";
         background: var(--SecondaryColor);
@@ -39,79 +41,77 @@
     }
   }
 
-  .secContent{
+  .secContent {
     justify-content: center;
     gap: 1.5rem;
 
-    .singleDestination{
+    .singleDestination {
       height: 100%;
       display: grid;
-      row-gap:  10px;
+      row-gap: 10px;
       border-radius: 10px;
       align-items: center;
       background: var(--cardBG);
       box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
       overflow: hidden;
 
-      &:hover{
-        background:var(--cardHover) ;
+      &:hover {
+        background: var(--cardHover);
         box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
-        transition: .3s ease
+        transition: 0.3s ease;
       }
 
-      .imageDiv{
+      .imageDiv {
         height: 100%;
         width: 100%;
-        overflow  : hidden;
+        overflow: hidden;
 
-        img{
+        img {
           height: 100%;
           width: 100%;
           object-fit: cover;
           transition: 2s ease;
         }
 
-        &:hover{
-          img{
+        &:hover {
+          img {
             transform: scale(1.2);
           }
         }
       }
 
-      .cardInfo{
+      .cardInfo {
         padding: 1rem;
 
-        .destTitle{
+        .destTitle {
           color: var(--blackColor);
           font-size: 1.25rem;
         }
 
-        .continent{
-          gap: .5rem;
+        .continent {
+          gap: 0.5rem;
 
-          .icon{
+          .icon {
             color: var(--textColor);
             font-size: 18px;
           }
 
-          .name{
+          .name {
             color: var(--textColor);
             font-weight: 400;
             font-size: 14px;
           }
-
-
         }
 
-        .fees{
+        .fees {
           width: 100%;
           justify-content: space-between;
           padding: 1rem;
-          margin:   1rem 0;
+          margin: 1rem 0;
           border-top: 1.5px solid var(--greyText);
           border-bottom: 1.5px solid var(--greyText);
 
-          .grade{
+          .grade {
             color: var(--textColor);
             max-width: 100px;
             line-height: 20px;
@@ -119,7 +119,7 @@
             justify-content: center;
             align-items: center;
 
-            small{
+            small {
               text-align: center;
               background: var(--gradientColor);
               border-radius: 1rem;
@@ -129,30 +129,57 @@
             }
           }
 
-          .price{
+          .price {
             font-size: 2rem;
-            color: var(--blackColor );
+            color: var(--blackColor);
           }
         }
 
-        .desc{
+        .desc {
           font-size: 13.5px;
           color: var(--textColor);
           font-weight: 500;
         }
-        .btn{
+        .btn {
           margin-top: 1rem;
           color: var(--whiteColor);
           font-weight: 600;
-          justify-content: space-between  ;
-          gap: .5rem;
+          justify-content: space-between;
+          gap: 0.5rem;
 
-          .icon{
+          .icon {
             font-size: 18px;
             align-self: center;
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+    &::after {
+      width: 155px !important;
+    }
+  }
+
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+
+    .singleDestination {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(3, 1fr);
+
+    .singleDestination {
+      height: auto;
     }
   }
 }
