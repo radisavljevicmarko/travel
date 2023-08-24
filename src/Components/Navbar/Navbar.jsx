@@ -18,7 +18,7 @@ const Navbar = () => {
     <section className="navBarSection">
       <header className="header flex">
         <div className="logoDiv">
-          <a href="/" className="logo flex">
+          <a href="#Home" className="logo flex">
             <h1>
               <MdOutlineTravelExplore className="icon" />
               Travel.
@@ -29,49 +29,49 @@ const Navbar = () => {
         <div className={active}>
           <ul className="navList flex">
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 Home
               </a>
             </li>
 
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 Package
               </a>
             </li>
 
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 Shop
               </a>
             </li>
 
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 About
               </a>
             </li>
 
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 Pages
               </a>
             </li>
 
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 News
               </a>
             </li>
 
             <li className="navItem">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 Contact
               </a>
             </li>
 
             <button className="btn">
-              <a href="/" className="navLink">
+              <a href="#Home" className="navLink">
                 BOOK NOW
               </a>
             </button>
