@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient(to right, var(--SecondaryColor), var(--PrimaryColor));
+  --gradientColor: linear-gradient(
+    to right,
+    var(--SecondaryColor),
+    var(--PrimaryColor)
+  );
   --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(201, 33%, 16%); 
+  --blackColor: hsl(201, 33%, 16%);
   --textColor: hsl(240, 4%, 36%);
   --whiteColorDeam: hsl(0, 0%, 93%);
   --greyText: rgb(190, 190, 190);
@@ -37,13 +41,12 @@ li {
   padding: 4rem 0 2rem;
 }
 
-.container{
+.container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-
 }
 
-.icon{
+.icon {
   font-size: 2rem;
   cursor: pointer;
 }
@@ -59,7 +62,7 @@ li {
 }
 
 .btn {
-  padding:.6rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   background: var(--gradientColor);
   border-radius: 3rem;
   border: none;
@@ -76,9 +79,10 @@ li {
   background: var(--SecondaryColor);
 }
 
-img,video {
-    width: 100%;
-    height: auto;
+img,
+video {
+  width: 100%;
+  height: auto;
 }
 
 input {
@@ -89,19 +93,19 @@ body {
   background: var(--bodyColor);
 }
 
-@media screen and (min-width:1240px) {
-  .container{
+@media screen and (min-width: 1240px) {
+  .container {
     width: 80% !important;
     margin: auto;
   }
 
-  .section{
+  .section {
     padding: 6rem 0 4rem;
   }
 }
 
-@media screen and (min-width:2560px) {
-  body{
+@media screen and (min-width: 2560px) {
+  body {
     zoom: 1.7;
   }
 }
